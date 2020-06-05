@@ -9,11 +9,7 @@ Hexo博客之速度优化（博客是基于gulp3的，不太适用。）
 https://www.jianshu.com/p/93b63852f0b3
 
 ### 环境
-Win 10
-git软件
-node: v14.4.0
-Hexo: 4.2.1
-gulp: 4.0.2 
+Win 10 / git软件 / node: v14.4.0 / Hexo: 4.2.1 / gulp: 4.0.2 
 
 ### 模块安装
 ```
@@ -45,9 +41,10 @@ git push -u origin master
 git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
 ```
 ##### 配置修改
-修改根目录下的_config.yml
+修改Hexo工作目录下的_config.yml
 ```
 title: 自己的站点标题
+...
 
 theme: Butterfly
 ```
@@ -67,7 +64,6 @@ hexo clean && hexo g && hexo s
 
 ##### 模块安装
 ```
-# 压缩用，非必须
 npm install gulp --save-dev
 npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify gulp-imagemin --save-dev
 npm install gulp-babel@7 --save-dev
@@ -137,4 +133,11 @@ gulp.task('default',gulp.series(gulp.parallel('minify-html','minify-css','minify
 ##### 启动
 ```
 hexo clean && hexo g && gulp && hexo s
+```
+
+### 代码提交
+```
+git add .
+git commit -m "hexo-butterly"
+git -u push origin master
 ```
